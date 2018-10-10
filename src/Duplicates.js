@@ -6,18 +6,6 @@ function Duplicates() {
     }
 
     function GetDuplicates(numbers) {
-        let duplicate = false;
-        numbers.forEach(number => {
-            let count = 0;
-            for (let index = 0; index < numbers.length; index++) {
-                if (numbers[index] == number) {
-                    count++;
-                }
-            }
-            if (count > 1) {
-                duplicate = true
-            }
-        });
-        return duplicate;
+        return numbers.some(x=>numbers.indexOf(x)!=numbers.lastIndexOf(x));
     }
 }
