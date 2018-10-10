@@ -56,7 +56,8 @@ describe("Duplicates", function () {
         describe("Given an array containing identical numbers", function () {
             [{ numbers: [1, 2, 3, 2], output: true },
             { numbers: [1, 5, 1, 6, 1, 3], output: true },
-            { numbers: [4, 5, 4, 6, 4, 7, 4, 8], output: true }]
+            { numbers: [4, 5, 4, 6, 4, 7, 4, 8], output: true },
+            { numbers: [3, 5, 5, 6, 4, 7, 4, 8], output: true }]
                 .forEach(function (element) {
                     it("Should return false", function () {
                         //----------------Arrange------------
@@ -75,7 +76,8 @@ describe("Duplicates", function () {
         describe("Given an array containing identical numbers as strings", function () {
             [{ numbers: ['1', '2', '3', '2'], output: true },
             { numbers: ['1', '5', '1', '6', '1', '3'], output: true },
-            { numbers: ['4', '5', '4', '6', '4', '7', '4', '8'], output: true }]
+            { numbers: ['4', '5', '4', '6', '4', '7', '4', '8'], output: true },
+            { numbers: ['3', '5', '4', '4', '4', '5', '5', '8'], output: true }]
                 .forEach(function (element) {
                     it("Should return false", function () {
                         //----------------Arrange------------
